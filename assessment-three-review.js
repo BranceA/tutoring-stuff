@@ -18,3 +18,21 @@ $("body").keydown(function(event){
             break;
     }
 })
+
+$(".runner").mouseenter(function(){
+    $(this).css("margin-left", "auto")
+})
+
+var whereAreWe = "left"
+
+$(".runner").mouseenter(function(){
+    if(whereAreWe === "left"){
+        $(this).css("margin-right", "0")
+        $(this).css("margin-left", "auto")
+        whereAreWe = "right"
+    } else if (whereAreWe === "right"){
+        $(this).css("margin-left", "0")
+        $(this).css("margin-right", "auto")
+        whereAreWe = "left"
+    }
+})
