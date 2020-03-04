@@ -4,20 +4,20 @@ $("h1").click(function(){
     $(this).css("color", "blue");
 });
 
-$("body").keydown(function(event){
-    event.preventDefault()
-    switch (event.keyCode){
-        case 66:
-            $("h1").css("color", "blue");
-            break;
-        case 89:
-            $("h1").css("color", "yellow");
-            break;
-        case 82:
-            $("h1").css("color", "red");
-            break;
-    }
-})
+// $("body").keydown(function(event){
+//     event.preventDefault()
+//     switch (event.keyCode){
+//         case 66:
+//             $("h1").css("color", "blue");
+//             break;
+//         case 89:
+//             $("h1").css("color", "yellow");
+//             break;
+//         case 82:
+//             $("h1").css("color", "red");
+//             break;
+//     }
+// })
 
 $(".runner").mouseenter(function(){
     $(this).css("margin-left", "auto")
@@ -36,3 +36,20 @@ $(".runner").mouseenter(function(){
         whereAreWe = "left"
     }
 })
+
+$("#add-btn").click(function(event){
+    event.preventDefault()
+
+    var addThis = $("#input").val()
+    $("#input").val("")
+    $("#add-to-me").append("<li>" + addThis + "</li>")
+})
+
+function moveLis(){
+    var moveThis = $(this).text()
+    $(this).remove("li")
+    $("#add-to-me").prepend("<li>" + moveThis + "</li>")
+    $("#add-to-me").children().first().bind("click", moveLis)
+}
+
+$("li").click(moveLis)
