@@ -4,6 +4,8 @@ $("h1").click(function(){
     $(this).css("color", "blue");
 });
 
+//The prevent default in this function is stopping the text input from working
+
 // $("body").keydown(function(event){
 //     event.preventDefault()
 //     switch (event.keyCode){
