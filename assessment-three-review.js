@@ -53,3 +53,12 @@ function moveLis(){
 }
 
 $("li").click(moveLis)
+
+setTimeout(function(){
+    $("*").css("font-family", "Comic Sans MS")
+}, 5000)
+
+setTimeout(function(){
+    console.log("test")
+    $("body").css("background-image", "url(https://images.pexels.com/photos/2740956/pexels-photo-2740956.jpeg?cs=srgb&dl=black-and-white-laptop-2740956.jpg&fm=jpg)")
+}, 1000)
