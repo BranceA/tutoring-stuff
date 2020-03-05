@@ -4,22 +4,20 @@ $("h1").click(function(){
     $(this).css("color", "blue");
 });
 
-//The prevent default in this function is stopping the text input from working
-
-// $("body").keydown(function(event){
-//     event.preventDefault()
-//     switch (event.keyCode){
-//         case 66:
-//             $("h1").css("color", "blue");
-//             break;
-//         case 89:
-//             $("h1").css("color", "yellow");
-//             break;
-//         case 82:
-//             $("h1").css("color", "red");
-//             break;
-//     }
-// })
+$("body").keydown(function(event){
+    
+    switch (event.keyCode){
+        case 66:
+            $("h1").css("color", "blue");
+            break;
+        case 89:
+            $("h1").css("color", "yellow");
+            break;
+        case 82:
+            $("h1").css("color", "red");
+            break;
+    }
+})
 
 $(".runner").mouseenter(function(){
     $(this).css("margin-left", "auto")
